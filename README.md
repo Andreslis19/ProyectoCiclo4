@@ -1,5 +1,5 @@
 # Venta de accesorios y repuestos
-Estamos en repositorio principal sobre el cual vamos a desarrollar nuestro proyecto de Hospitalización de mascotas
+Estamos en repositorio principal sobre el cual vamos a desarrollar nuestro proyecto de venta de accesorios y repuestos
 
 Las recomendacines hasta el momento son:
 
