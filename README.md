@@ -1,2 +1,8 @@
-# ProyectoCiclo4
-Proyecto de venta de accesorios electronicos y de repuestos
+#Hospitalizacion En Casa Mascotas
+Estamos en repositorio principal sobre el cual vamos a desarrollar nuestro proyecto de Hospitalización de mascotas
+
+Las recomendacines hasta el momento son:
+
+Crear una cuenta en GitHub
+Clonar este repositorio
+No modificar la rama main
