@@ -40,6 +40,18 @@ export class Persona extends Entity {
   })
   cedula: string;
 
+  @property({
+    type: 'string',
+    required: true,
+  })
+  correo: string;
+
+  @property({
+    type: 'string',
+    required: false,
+  })
+  clave: string;
+
   @hasMany(() => Compra)
   compras: Compra[];
 

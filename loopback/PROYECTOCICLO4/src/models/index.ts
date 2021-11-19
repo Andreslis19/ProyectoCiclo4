@@ -4,3 +4,4 @@ export * from './compra.model';
 export * from './estado-compra.model';
 export * from './vendedor.model';
 export * from './administrador.model';
+export * from './credenciales.model';
