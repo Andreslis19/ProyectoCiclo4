@@ -30,7 +30,7 @@ export class App extends BootMixin(
     // Customize @loopback/rest-explorer configuration here
     this.configure(RestExplorerBindings.COMPONENT).to({
       path: '/explorer',
-    });
+    }); 
     this.component(RestExplorerComponent);
 
     this.projectRoot = __dirname;
