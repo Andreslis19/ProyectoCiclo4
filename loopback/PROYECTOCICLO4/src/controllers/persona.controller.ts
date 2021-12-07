@@ -86,9 +86,9 @@ export class PersonaController {
 
     let destino = persona.correo;
     let asunto = "Registro app Pedidos";
-    let mensaje = `Hola ${persona.nombre}, su usuario es: ${persona.correo} y su contraseña es: ${clave}`;
+    let mensaje1 = `Hola ${persona.nombre}, su usuario es: ${persona.correo} y su contraseña es: ${clave}`;
 
-    fetch(`${Llaves.urlServicioNotificaciones}/email?correo=${destino}&asunto=${asunto}&mensaje=${mensaje}`)
+    fetch(`${Llaves.urlServicioNotificaciones}/email?correo_destino=${destino}&asunto=${asunto}&contenido=${mensaje1}`)
     .then((data:any)=>{
       console.log(data);
     })
