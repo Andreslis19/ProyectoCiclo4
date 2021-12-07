@@ -1,49 +1,21 @@
-<form [formGroup] = "fgValidador" (ngSubmit)="IdentificarUsuario()" > <!-- Change The Form Method From Here-->
-    <div class="card-panel z-depth-5">
-
-        <!-- Form Logo Section  -->
-
-        <div class="row margin">
-            <div class="col s12 m12 l12 center">
-                <img src="https://www.clipartkey.com/mpngs/m/65-651790_user-icon-login-logo.png"
-                 alt="" class="responsive-img circle" style="width:100px;">
-                <p>Inicio de sesion TECNOVENT</p>
-            </div>
+<form [formGroup] = "fgValidador" (ngSubmit)="IdentificarUsuario()">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Iniciar Sesion </h2>
+          <h2 class="inactive underlineHover">Registrarse</h2>
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="./assets/TECNOVENT.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          
+            <input formControlName = 'usuario' type="text" id="login" class="fadeIn second" name="login" placeholder="Correo">
+            <input formControlName = 'clave' type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+            <input [disabled] = "!fgValidador.valid" type="submit" class="fadeIn fourth" value="Ingresar">
+      
         </div>
-
-        <!-- Form Username Input Section -->
-
-        <div class="col s12 m12 l12">
-            <div class="input-field">
-                <i class="material-icons prefix">person</i>
-                <input formControlName = 'usuario' type="text" name="username" id="username">
-                <label for="username">Usuario</label>
-            </div>
-        </div>
-
-        <!-- Form Password Input Section -->
-
-        <div class="col m12 l12">
-            <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input formControlName = 'clave' type="password" name="password" id="password">
-                <label for="password">Contraseña</label>
-            </div>
-        </div>
-        <br><br>
-
-            <!-- Form Button Section  -->
-
-        <div class="center">
-            <input  [disabled] = "!fgValidador.valid" type="submit" value="Ingresar" name="login" 
-            class="btn waves-effect waves-light " 
-            style="width:100%; background-color: #ff4081;">
-        </div>
-
-            <!-- Form "Register Now" And "Forgot Password" Link Section. -->
-
-        <div class="" style="font-size:30px;"><br>
-            <a href="" class="left">Registrese</a>
-        </div><br>
-    </div>
+      </div>
 </form>

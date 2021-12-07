@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SeguridadService } from 'src/app/servicios/seguridad.service';
 import { SeguridadModule } from '../seguridad.module';
 import * as cryptoJS from 'crypto-js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-identificar',
@@ -11,13 +12,16 @@ import * as cryptoJS from 'crypto-js';
 })
 export class IdentificarComponent implements OnInit {
 
+  estaIdentificado:boolean=false;
+
   fgValidador : FormGroup = this.fb.group({
     'usuario' : ['', [Validators.required, Validators.email]],
     'clave' : ['', [Validators.required]]
   });
 
   constructor(private fb: FormBuilder,
-    private servicioSeguridad: SeguridadService
+    private servicioSeguridad: SeguridadService,
+    private router: Router
     ) { }
 
   ngOnInit(): void {
@@ -30,7 +34,8 @@ export class IdentificarComponent implements OnInit {
 
     this.servicioSeguridad.Identificar(usuario, ClaveCifrada).subscribe((datos:any) =>{
       //ok
-      alert("Datos Correctos")
+      this.servicioSeguridad.AlmacenarSesion(datos);
+      this.router.navigate(["/inicio"])
     }, (error:any)=>{
       //malo
       alert ("datos invalidos")
