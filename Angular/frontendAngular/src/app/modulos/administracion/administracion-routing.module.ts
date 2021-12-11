@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactenosComponent } from './contactenos/contactenos.component';
+import { MisionVisionComponent } from './mision-vision/mision-vision.component';
 import { BuscarPersonaComponent } from './personas/buscar-persona/buscar-persona.component';
 import { CrearPersonaComponent } from './personas/crear-persona/crear-persona.component';
 import { EditarPersonaComponent } from './personas/editar-persona/editar-persona.component';
@@ -42,6 +44,46 @@ const routes: Routes = [
   {
     path : "editar",
     component: EditarProductoComponent 
+  },
+  {
+    path : "buscar-producto",
+    component: BuscarProductoComponent
+  },
+  {
+    path: "editar-producto/:id",
+    component : EditarProductoComponent
+  },
+  {
+    path: "crear-producto",
+    component : CrearProductoComponent
+  },
+  {
+    path: "eliminar-producto/:id",
+    component: EliminarProductoComponent
+  },
+  {
+    path : "buscar-persona",
+    component: BuscarPersonaComponent
+  },
+  {
+    path: "editar-persona/:id",
+    component : EditarPersonaComponent
+  },
+  {
+    path: "crear-persona",
+    component : CrearPersonaComponent
+  },
+  {
+    path: "eliminar-persona/:id",
+    component: EliminarPersonaComponent
+  },
+  {
+    path: "contactenos",
+    component: ContactenosComponent
+  },
+  {
+    path: "mision-vision",
+    component: MisionVisionComponent
   }
 ];
 

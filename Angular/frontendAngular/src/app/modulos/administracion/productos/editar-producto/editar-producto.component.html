@@ -1,1 +1,26 @@
-<p>editar-producto works!</p>
+
+<form [formGroup] = "fgValidador" (ngSubmit)="EditarProducto()">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Editar Producto </h2>
+
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="./assets/TECNOVENT.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          
+            <input type="hidden" formControlName = "id"/>
+            <input formControlName = 'Nombre' type="text" id="Nombre" class="fadeIn second" name="Nombre" placeholder="Ingrese Nombre del Producto">
+            <input formControlName = 'Descripcion' type="text" id="Descripcion" class="fadeIn third" name="Descripcion" placeholder="Ingrese Descripcion del Producto">
+            <input formControlName = 'Cantidad' type="text" id="Cantidad" class="fadeIn third" name="Cantidad" placeholder="Ingrese Cantidad de Productos">
+            <input formControlName = 'Precio' type="text" id="Precio" class="fadeIn third" name="Precio" placeholder="Ingrese Precio del Producto">
+            <input formControlName = 'Foto' type="text" id="Foto" class="fadeIn third" name="Foto" placeholder="Ingrese Foto del Producto">
+            <input [disabled] = "!fgValidador.valid" type="submit" class="fadeIn fourth" value="Guardar Producto">
+      
+        </div>
+      </div>
+</form>

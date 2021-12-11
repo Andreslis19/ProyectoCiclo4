@@ -1,7 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
 import { ErrorComponent } from './plantilla/error/error.component';
+
+
 
 const routes: Routes = [
   {
@@ -28,7 +30,8 @@ const routes: Routes = [
   {
     path: "**",  //sintaxis para los comodines en caso de que coloque mal la url
     component: ErrorComponent
-  }
+  },
+  
 ];
 
 @NgModule({

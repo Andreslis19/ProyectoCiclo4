@@ -16,13 +16,20 @@ export class IdentificarComponent implements OnInit {
 
   fgValidador : FormGroup = this.fb.group({
     'usuario' : ['', [Validators.required, Validators.email]],
-    'clave' : ['', [Validators.required]]
+    'clave' : ['', [Validators.required]],
+    'recaptcha' : ['', [Validators.required]]
   });
+
+  //inicializa la variable en vacio
+  siteKey:string="";
 
   constructor(private fb: FormBuilder,
     private servicioSeguridad: SeguridadService,
     private router: Router
-    ) { }
+    ) {
+      //inicia la variable del site key que se saca de la pagina de captcha de google
+      this.siteKey="6LedsZIdAAAAAPnAcMQHr-xi3a5iJIZr0D1RdgH5";
+     }
 
   ngOnInit(): void {
   }

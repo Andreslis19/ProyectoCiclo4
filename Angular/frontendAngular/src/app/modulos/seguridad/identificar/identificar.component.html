@@ -1,9 +1,14 @@
+<style>
+  .g-recaptcha {
+      display: inline-block;
+  }
+</style>
 <form [formGroup] = "fgValidador" (ngSubmit)="IdentificarUsuario()">
     <div class="wrapper fadeInDown">
         <div id="formContent">
           <!-- Tabs Titles -->
           <h2 class="active"> Iniciar Sesion </h2>
-          <h2 class="inactive underlineHover">Registrarse</h2>
+          
       
           <!-- Icon -->
           <div class="fadeIn first">
@@ -14,7 +19,21 @@
           
             <input formControlName = 'usuario' type="text" id="login" class="fadeIn second" name="login" placeholder="Correo">
             <input formControlName = 'clave' type="password" id="password" class="fadeIn third" name="login" placeholder="Contraseña">
+            <br>
+            <form [formGroup]="fgValidador" >
+              <div style="text-align: center;" >
+                <div style="display: inline-block;">
+              <ngx-recaptcha2 #captchaElem
+                [siteKey]="siteKey"
+                formControlName="recaptcha">
+              </ngx-recaptcha2>
+                </div>
+              </div>
+            </form>
+            <br>
             <input [disabled] = "!fgValidador.valid" type="submit" class="fadeIn fourth" value="Ingresar">
+            <input type="button" class="fadeIn fourth" value="Registrar" routerLink="/administracion/crear-persona">
+            
       
         </div>
       </div>

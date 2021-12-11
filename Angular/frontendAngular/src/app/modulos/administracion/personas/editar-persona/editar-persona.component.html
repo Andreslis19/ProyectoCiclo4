@@ -1,1 +1,24 @@
-<p>editar-persona works!</p>
+<form [formGroup] = "fgValidador" (ngSubmit)="EditarPersona()">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Editar Persona </h2>
+
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="./assets/TECNOVENT.png" id="icon" alt="User Icon" />
+          </div>
+      
+          <!-- Login Form -->
+          
+            <input formControlName = 'nombre' type="text" id="nombre" class="fadeIn second" name="nombre" placeholder="Ingrese Nombre de la persona">
+            <input formControlName = 'apellidos' type="text" id="apellidos" class="fadeIn third" name="apellidos" placeholder="Ingrese los apellidos">
+            <input formControlName = 'cedula' type="text" id="cedula" class="fadeIn third" name="cedula" placeholder="Ingrese el numero de cedula">
+            <input formControlName = 'telefono' type="text" id="telefono" class="fadeIn third" name="telefono" placeholder="Ingrese el telefono">
+            <input formControlName = 'correo' type="text" id="correo" class="fadeIn third" name="correo" placeholder="Ingrese el correo">
+            <input [disabled] = "!fgValidador.valid" type="submit" class="fadeIn fourth" value="Guardar Persona">
+      
+        </div>
+      </div>
+</form>

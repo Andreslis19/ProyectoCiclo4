@@ -23,6 +23,7 @@ import {Credenciales, Persona} from '../models';
 import {PersonaRepository} from '../repositories';
 import {AutenticacionService} from '../services';
 import {Llaves} from '../config/llaves';
+import { authenticate } from '@loopback/authentication';
 const fetch = require("node-fetch");
 
 export class PersonaController {
@@ -144,6 +145,8 @@ export class PersonaController {
     return this.personaRepository.updateAll(persona, where);
   }
 
+
+  @authenticate.skip()
   @get('/personas/{id}')
   @response(200, {
     description: 'Persona model instance',
