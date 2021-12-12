@@ -6,3 +6,10 @@ body {
     background-size: 100%;
     color: rgb(221, 226, 221);
     }
+    .error{
+        background-image: url("./assets/error2.gif");
+        background-repeat: no-repeat;
+        background-attachment: local;
+        background-size: 79%;
+        background-position:center;
+    }

@@ -1,15 +1,15 @@
 body{
-    
+    background-image:image("./assets/error1-gif");
     margin: 0;
     padding: 0;
     height: 100vh;
     font-family: 'Open Sans', sans-serif;
 }
 img{
-    width: 80%;
+    width: 50%;
 }
 .container{
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -22,8 +22,8 @@ h1{
     padding: 20px;
 }
 button{
-    font-size: 30px;
-    padding: 20px 60px;
+    font-size: 25px;
+    padding: 15px 50px;
     border-radius: 15px;
     border: none;
     background: rgb(5, 129, 245);
