@@ -3,7 +3,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #56bbedb9;
 }
 
 body {
@@ -25,7 +25,7 @@ h2 {
   text-transform: uppercase;
   display:inline-block;
   margin: 40px 8px 10px 8px; 
-  color: #cccccc;
+  color: #c7c4c4;
 }
 
 
@@ -58,7 +58,7 @@ h2 {
 
 #formFooter {
   background-color: #f6f6f6;
-  border-top: 1px solid #dce8f1;
+  border-top: 1px solid #f4f8fc;
   padding: 25px;
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
@@ -70,11 +70,11 @@ h2 {
 /* TABS */
 
 h2.inactive {
-  color: #ccc5c5;
+  color: #f7f4f4;
 }
 
 h2.active {
-  color: #00000063;
+  color: #e9e9e963;
   border-bottom: 0.5px solid #5fbbe93d;
 }
 
@@ -91,7 +91,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 20px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -102,6 +102,10 @@ input[type=button], input[type=submit], input[type=reset]  {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+div {
+  transition: width 2s, height 2s, transform 2s;
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {

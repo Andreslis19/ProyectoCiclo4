@@ -12,11 +12,11 @@ body{
 .contact_form{  
   width: 600px; 
   height: auto;
-  margin: 80px auto;
+  margin: 20px auto;
   border-radius: 10px;  
   padding-top: 30px;
   padding-bottom: 20px;  
-  background-color: #06a6f770; 
+  background-color: rgba(100, 123, 252, 0.342); 
   padding-left: 30px; 
 }
 
@@ -83,13 +83,13 @@ span{
 
 
 .aviso{
-  font-size: 13px;  
+  font-size: 15px;  
   color: #f5f4f4;  
 }
 
 
 h1{
-  font-size: 39px;  
+  font-size: 34px;  
   text-align: letf; 
   padding-bottom: 20px; 
   color: #f2f8fa;
@@ -104,8 +104,8 @@ h3{
 
 
 p{
-  font-size: 14px; 
-  color: #0e0e0e; 
+  font-size: 20px; 
+  color: #f8f1f1; 
 }
 
 
